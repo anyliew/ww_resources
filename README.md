@@ -1,7 +1,8 @@
 <div align="center">
 <img src="./docs/logo.png" width=200 />
 
-# Wuthering Waves Resources (鸣潮资源库)
+# Wuthering Waves Resources
+# 鸣潮资源库
 
 <p align="center">
   <a href="https://qm.qq.com/q/DVb9aGPmaQ">
