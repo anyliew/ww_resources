@@ -10,16 +10,65 @@
 </p>
 </div>
 
-本仓库收集整理与《鸣潮》(Wuthering Waves)相关的资源文件，以及为 [WutheringWavesUID](https://github.com/WutheringWavesUID/WutheringWavesUID) 插件提供的第三方素材资源。
+本仓库收集整理与 鸣潮 Wuthering Waves相关的资源文件；
+
+以及为 **早柚核心GsCore**插件[WutheringWavesUID](https://github.com/tyql688/WutheringWavesUID) 插件提供的第三方素材资源。
 
 ## 📁 资源目录结构
 
-| 介绍               | 文件夹           |
-| ------------------ | ---------------- |
-| ww帮助菜单顶图     | banner_bg        |
-| ww人物角色面板图片 | custom_role_pile |
+| 介绍                                                         | 文件夹           |
+| ------------------------------------------------------------ | ---------------- |
+| [WutheringWavesUID](https://github.com/tyql688/WutheringWavesUID) /ww帮助菜单顶图 | banner_bg        |
+| [WutheringWavesUID](https://github.com/tyql688/WutheringWavesUID)/ww角色面板图片 | custom_role_pile |
 
-## 📝 游戏角色名称与id对应表
+
+
+## ✨ 使用方法
+
+   - 将素材放入插件指定的资源目录
+
+   - 参考插件文档配置资源路径
+
+     
+
+### 🖼 banner_bg  ww帮助菜单顶图
+
+> [!NOTE]
+>
+> 路径：/gsuid_core/gsuid_core/plugins/WutheringWavesUID/WutheringWavesUID/wutheringwaves_help/texture2d/banner_bg.jpg
+
+
+
+将本项目下载后，挑选 ww_resources/banner_bg 里面一张喜欢的图片 ，重命名为 banner_bg.jpg复制到 /gsuid_core/gsuid_core/plugins/WutheringWavesUID/WutheringWavesUID/wutheringwaves_help/texture2d/banner_bg.jpg 替换原文件即可。
+
+
+
+参考图：
+
+![ww散华面板](./docs/ww_panel.jpg)
+
+
+
+### 🖼 custom_role_pile ww人物角色面板图片
+
+> [!NOTE]
+>
+> 路径 ：gsuid_core/data/WutheringWavesUID/custom_role_pile
+>
+
+
+
+将本项目下载后，将ww_resources//custom_role_pile复制到 gsuid_core/data/WutheringWavesUID/custom_role_pile/ 目录下即可。
+
+
+
+参考图:
+
+![ww帮助](./docs/ww_help.jpg)
+
+
+
+#### 📝 游戏角色名称与id对应表
 
 > custom_role_pile
 >
@@ -69,23 +118,13 @@
 
 
 
-1. **WutheringWavesUID插件使用**：
-   - 将素材放入插件指定的资源目录
-   - 参考插件文档配置资源路径
-
 ## 📌 注意事项
 
 - 禁止将本仓库资源用于任何商业用途
-- 欢迎提交 Pull Request 补充更多优质资源
+- 欢迎提交 Pull Request 补充更多优质图片素材
 - 如有侵权内容，请通过 Issues 联系删除
 
-## 🤝 贡献指南
+## 📌声明
 
-欢迎贡献优质资源！请遵循以下步骤：
-
-1. Fork 本仓库
-2. 创建新分支 (`git checkout -b feature/your-resource`)
-3. 提交更改 (`git commit -m 'Add some resource'`)
-4. 推送到分支 (`git push origin feature/your-resource`)
-5. 创建 Pull Request
+本仓库的表情素材等均来自网络，如有侵权请联系作者删除
 
