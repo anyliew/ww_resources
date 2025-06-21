@@ -11,11 +11,13 @@
 </p>
 </div>
 
-本仓库收集整理与 鸣潮 Wuthering Waves相关的资源文件；
 
 
+本仓库收集整理与 鸣潮/Wuthering Waves 相关的资源文件；
 
 以及为 **早柚核心GsCore**插件[WutheringWavesUID](https://github.com/tyql688/WutheringWavesUID) 插件提供的第三方素材资源。
+
+
 
 ## 📁 资源目录结构
 
