@@ -1,7 +1,7 @@
 <div align="center">
 <img src="./docs/logo.png" width=200 />
 
-# Wuthering Waves Resources
+# ww_resources
 # 鸣潮资源库
 
 <p align="center">
@@ -12,6 +12,8 @@
 </div>
 
 本仓库收集整理与 鸣潮 Wuthering Waves相关的资源文件；
+
+
 
 以及为 **早柚核心GsCore**插件[WutheringWavesUID](https://github.com/tyql688/WutheringWavesUID) 插件提供的第三方素材资源。
 
@@ -38,11 +40,7 @@
 >
 > 路径：/gsuid_core/gsuid_core/plugins/WutheringWavesUID/WutheringWavesUID/wutheringwaves_help/texture2d/banner_bg.jpg
 
-
-
 将本项目下载后，挑选 ww_resources/banner_bg 里面一张喜欢的图片 ，重命名为 banner_bg.jpg复制到 /gsuid_core/gsuid_core/plugins/WutheringWavesUID/WutheringWavesUID/wutheringwaves_help/texture2d/banner_bg.jpg 替换原文件即可。
-
-
 
 参考图：
 
@@ -57,11 +55,7 @@
 > 路径 ：gsuid_core/data/WutheringWavesUID/custom_role_pile
 >
 
-
-
 将本项目下载后，将ww_resources//custom_role_pile复制到 gsuid_core/data/WutheringWavesUID/custom_role_pile/ 目录下即可。
-
-
 
 参考图:
 
@@ -122,10 +116,10 @@
 ## 📌 注意事项
 
 - 禁止将本仓库资源用于任何商业用途
-- 欢迎提交 Pull Request 补充更多优质图片素材
-- 如有侵权内容，请通过 Issues 联系删除
+
+  
 
 ## 📌声明
 
-本仓库的表情素材等均来自网络，如有侵权请联系作者删除
+本仓库的表情素材等均来自网络，如有侵权请联系作者删除，如有侵权内容，请通过 Issues 联系删除！
 
