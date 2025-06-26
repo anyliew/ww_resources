@@ -23,7 +23,7 @@
 
 | 介绍                                                         | 文件夹           |
 | ------------------------------------------------------------ | ---------------- |
-| [WutheringWavesUID](https://github.com/tyql688/WutheringWavesUID) /ww帮助菜单顶图 | banner_bg        |
+| [WutheringWavesUID](https://github.com/tyql688/WutheringWavesUID) rs帮助/ww帮助 菜单顶图 | banner_bg        |
 | [WutheringWavesUID](https://github.com/tyql688/WutheringWavesUID)/ww角色面板图片 | custom_role_pile |
 
 
@@ -36,9 +36,11 @@
 
      
 
-### 🖼 banner_bg  ww帮助菜单顶图
+### 🖼 banner_bg  rs帮助/ww帮助菜单顶图
 
 > [!NOTE]
+>
+> 路径：/opt/gsuid_core/gsuid_core/plugins/RoverSign/RoverSign/roversign_help/texture2d/banner_bg.jpg
 >
 > 路径：/gsuid_core/gsuid_core/plugins/WutheringWavesUID/WutheringWavesUID/wutheringwaves_help/texture2d/banner_bg.jpg
 
@@ -46,9 +48,8 @@
 
 #### 🖼参考图
 
+![rs帮助](./docs/rs_help.jpg)
 ![ww帮助](./docs/ww_help.jpg)
-
-
 
 ### 🖼 custom_role_pile ww角色面板图片
 
@@ -62,7 +63,7 @@
 #### 🖼参考图
 面板参考图"ww散华面板":
 
-![ww散华面板](./docs/ww_panel.jpeg)
+![ww散华面板](./docs/ww_panel.jpg)
 
 #### Debian Linux 使用教程
 
