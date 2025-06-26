@@ -44,25 +44,65 @@
 
 将本项目下载后，挑选 ww_resources/banner_bg 里面一张喜欢的图片 ，重命名为 banner_bg.jpg复制到 /gsuid_core/gsuid_core/plugins/WutheringWavesUID/WutheringWavesUID/wutheringwaves_help/texture2d/banner_bg.jpg 替换原文件即可。
 
-参考图：
+#### 🖼参考图
 
-![ww散华面板](./docs/ww_panel.jpg)
+![ww帮助](./docs/ww_help.jpg)
 
 
 
-### 🖼 custom_role_pile ww人物角色面板图片
+### 🖼 custom_role_pile ww角色面板图片
 
 > [!NOTE]
 >
 > 路径 ：gsuid_core/data/WutheringWavesUID/custom_role_pile
 >
 
-将本项目下载后，将ww_resources//custom_role_pile复制到 gsuid_core/data/WutheringWavesUID/custom_role_pile/ 目录下即可。
+将本项目下载后，手动将ww_resources/custom_role_pile复制到 gsuid_core/data/WutheringWavesUID/custom_role_pile/ 目录下即可。
 
-参考图:
+#### 🖼参考图
+面板参考图"ww散华面板":
 
-![ww帮助](./docs/ww_help.jpg)
+![ww散华面板](./docs/ww_panel.jpeg)
 
+#### Debian Linux 使用教程
+
+> [!NOTE]
+>
+> 我的WutheringWavesUID存放角色面板图片的路径是 "/opt/picture/ww_resources/custom_role_pile/ "
+>
+> 仅提供参考，需按照实际位置进行修改
+
+
+
+(1) 通过APT包管理器安装两个软件包`rsync` 和 `git`。
+
+```bash
+apt install -y rsync git
+```
+
+
+(2) 将GitHub仓库 anyliew/ww_resources 克隆到本地目录 /opt/picture/ww_resources/ ;如果目标目录不存在，git会自动创建
+
+```bash
+git clone https://github.com/anyliew/ww_resources /opt/picture/ww_resources/
+```
+
+
+(3) 将源目录 /opt/picture/ww_resources/custom_role_pile/ 的内容同步到目标目录 /opt/gsuid_core/data/WutheringWavesUID/custom_role_pile/。
+
+```bash
+rsync -av --delete --progress /opt/picture/ww_resources/custom_role_pile/ /opt/gsuid_core/data/WutheringWavesUID/custom_role_pile/
+```
+
+#### 1panel定时更新
+
+自动化脚本，用于定期更新
+
+```bash
+cd /opt/picture/ww_resources/ && git pull
+rsync -av --delete --progress /opt/picture/ww_resources/custom_role_pile/ /opt/gsuid_core/data/WutheringWavesUID/custom_role_pile/
+```
+![1panel计划任务](./docs/1panel_scheduled_task.png)
 
 
 #### 📝 游戏角色名称与id对应表
