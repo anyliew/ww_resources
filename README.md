@@ -48,8 +48,12 @@
 
 #### 🖼参考图
 
-![rs帮助](./docs/rs_help.jpg)
-![ww帮助](./docs/ww_help.jpg)
+<details><summary>🖼rs帮助</summary><p>
+<a><img src="./docs/rs_help.jpg"></a>
+</details>
+<details><summary>🖼ww帮助</summary><p>
+<a><img src="./docs/ww_help.jpg"></a>
+</details>
 
 ### 🖼 custom_role_pile ww角色面板图片
 
@@ -61,9 +65,10 @@
 将本项目下载后，手动将ww_resources/custom_role_pile复制到 gsuid_core/data/WutheringWavesUID/custom_role_pile/ 目录下即可。
 
 #### 🖼参考图
-面板参考图"ww散华面板":
 
-![ww散华面板](./docs/ww_panel.jpg)
+<details><summary>🖼面板参考图"ww散华面板"</summary><p>
+<a><img src="./docs/ww_panel.jpg"></a>
+</details>
 
 #### Debian Linux 使用教程
 
@@ -109,52 +114,9 @@ rsync -av --delete --progress /opt/picture/ww_resources/custom_role_pile/ /opt/g
 #### 📝 游戏角色名称与id对应表
 
 > custom_role_pile
->
 > 参考 WutheringWavesUID/utils/map/detail_json/char
 
-|    名称     | id   |
-| :---------: | ---- |
-|    散华     | 1102 |
-|    白芷     | 1103 |
-|    凌阳     | 1104 |
-|    折枝     | 1105 |
-|    釉瑚     | 1106 |
-|   珂莱塔    | 1107 |
-|    炽霞     | 1202 |
-|    安可     | 1203 |
-|   莫特斐    | 1204 |
-|    长离     | 1205 |
-|   布兰特    | 1206 |
-|    露帕     | 1207 |
-|   卡卡罗    | 1301 |
-|    吟霖     | 1302 |
-|    渊武     | 1303 |
-|    今汐     | 1304 |
-|   相里要    | 1305 |
-|    秧秧     | 1402 |
-|    秋水     | 1403 |
-|    忌炎     | 1404 |
-|    鉴心     | 1405 |
-| 漂泊者·气动 | 1406 |
-|    夏空     | 1407 |
-| 漂泊者·气动 | 1408 |
-|  卡提希娅   | 1409 |
-| 漂泊者·衍射 | 1501 |
-| 漂泊者·衍射 | 1502 |
-|   维里奈    | 1503 |
-|    灯灯     | 1504 |
-|   守岸人    | 1505 |
-|    菲比     | 1506 |
-|    赞妮     | 1507 |
-|    桃祈     | 1601 |
-|    丹瑾     | 1602 |
-|     椿      | 1603 |
-| 漂泊者·湮灭 | 1604 |
-| 漂泊者·湮灭 | 1605 |
-|   洛可可    | 1606 |
-|  坎特蕾拉   | 1607 |
-
-
+[对应表](./custom_role_pile/README.md)
 
 ## 📌 注意事项
 
