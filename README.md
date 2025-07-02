@@ -4,15 +4,6 @@
 # ww_resources
 # 鸣潮资源库
 
-<p align="center">
-  <a href="https://qm.qq.com/q/DVb9aGPmaQ">
-    <img src="https://img.shields.io/badge/QQ%E7%BE%A4-743103809-orange">
-  </a>
-</p>
-</div>
-
-
-
 本仓库收集整理与 鸣潮/Wuthering Waves 相关的资源文件；
 
 以及为 **早柚核心GsCore**插件[WutheringWavesUID](https://github.com/tyql688/WutheringWavesUID) 插件提供的第三方素材资源。
