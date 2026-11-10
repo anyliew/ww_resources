@@ -1,0 +1,79 @@
+name: Update Wiki Role Stats
+
+# custom_role_pile 有更新时自动重建 wiki 统计页；也支持在 Actions 页面手动触发。
+on:
+  push:
+    paths:
+      - 'custom_role_pile/**'
+      - '.github/workflows/update-wiki-stats.yml'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'ww.nanoka.cc 数据版本（留空自动探测）'
+        required: false
+        default: ''
+      override:
+        description: '人工指定性别，格式 ID=男/女（多个用逗号分隔，如 1512=女）'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+concurrency:
+  group: wiki-role-stats
+  cancel-in-progress: true
+
+jobs:
+  update-wiki:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout resources
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Checkout wiki
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository }}.wiki
+          path: wiki
+          # 推送 wiki 需要 PAT：GitHub 的 GITHUB_TOKEN 没有 wiki 仓库写权限。
+          # 在 Settings → Secrets and variables → Actions 添加 WIKI_TOKEN（fine-grained PAT，
+          # 勾选本仓库 Contents: Read and write），未配置时回退到 GITHUB_TOKEN。
+          token: ${{ secrets.WIKI_TOKEN || secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Generate stats page
+        shell: bash
+        env:
+          VERSION: ${{ inputs.version }}
+          OVERRIDE: ${{ inputs.override }}
+        run: |
+          args=(--pile custom_role_pile --wiki wiki)
+          if [ -n "$VERSION" ]; then args+=(--version "$VERSION"); fi
+          if [ -n "$OVERRIDE" ]; then
+            IFS=',' read -ra pairs <<< "$OVERRIDE"
+            for p in "${pairs[@]}"; do
+              [ -n "$p" ] && args+=(--override "$p")
+            done
+          fi
+          python wiki/scripts/update_stats.py "${args[@]}"
+
+      - name: Commit and push wiki
+        working-directory: wiki
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "统计页无变化，跳过提交"
+            exit 0
+          fi
+          git add -A
+          git commit -m "chore: 更新角色资源统计（${GITHUB_SHA::7}）"
+          git push

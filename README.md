@@ -133,6 +133,23 @@ rsync -av --delete --progress /opt/picture/ww_resources/custom_role_pile/ /opt/g
 
 
 
+## 🤖 自动化：角色资源统计 Wiki
+
+当 `custom_role_pile/` 有文件变更时，GitHub Actions 会自动重建
+[Wiki 角色资源统计](https://github.com/anyliew/ww_resources/wiki/%E8%A7%92%E8%89%B2%E8%B5%84%E6%BA%90%E7%BB%9F%E8%AE%A1) 页面。
+
+- 工作流：`.github/workflows/update-wiki-stats.yml`
+- 统计脚本：`ww_resources.wiki` 仓库 → `scripts/update_stats.py`（纯标准库）
+- 角色名/性别：查询 [ww.nanoka.cc](https://ww.nanoka.cc/character)
+- 统计内容：每个角色 ID 的图片数量与占用大小，并输出「男女合计 / 女性 / 男性 / 性别未知」四张表
+- 手动触发：Actions → **Update Wiki Role Stats** → Run workflow
+  （可填 `version` 指定数据版本，`override` 人工修正性别，如 `1512=女`）
+
+> [!IMPORTANT]
+> 推送 wiki 需要 **PAT**：在仓库 `Settings → Secrets and variables → Actions`
+> 新建 `WIKI_TOKEN`（fine-grained token，权限 `Contents: Read and write`）。
+> GitHub 默认的 `GITHUB_TOKEN` 没有 wiki 仓库写权限。
+
 ## 📌 注意事项
 
 禁止将本仓库资源用于任何商业用途
