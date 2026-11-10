@@ -68,7 +68,7 @@ jobs:
           VERSION: ${{ inputs.version }}
           OVERRIDE: ${{ inputs.override }}
         run: |
-          args=(--pile custom_role_pile --wiki wiki)
+          args=(--pile custom_role_pile --wiki wiki --repo "${{ github.repository }}")
           if [ -n "$VERSION" ]; then args+=(--version "$VERSION"); fi
           if [ -n "$OVERRIDE" ]; then
             IFS=',' read -ra pairs <<< "$OVERRIDE"
@@ -89,5 +89,5 @@ jobs:
             exit 0
           fi
           git add -A
-          git commit -m "chore: 更新角色资源统计（${GITHUB_SHA::7}）"
+          git commit -m "chore: 更新角色面板图资源统计（${GITHUB_SHA::7}）"
           git push
