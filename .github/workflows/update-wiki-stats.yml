@@ -28,6 +28,21 @@ jobs:
   update-wiki:
     runs-on: ubuntu-latest
     steps:
+      # wiki 是独立仓库，GITHUB_TOKEN 没有它的写权限；且 fine-grained PAT 的仓库
+      # 选择列表里不含 <repo>.wiki（选了也 403），所以必须用 classic PAT。
+      # 没配就立刻失败并提示，避免 checkout/push 阶段报难懂的错误或静默不推。
+      - name: Verify WIKI_TOKEN
+        shell: bash
+        env:
+          WIKI_TOKEN: ${{ secrets.WIKI_TOKEN }}
+        run: |
+          if [ -z "$WIKI_TOKEN" ]; then
+            echo "::error::缺少 WIKI_TOKEN，无法推送 wiki 仓库。"
+            echo "请到 Settings → Secrets and variables → Actions → New repository secret"
+            echo "新建名为 WIKI_TOKEN 的 secret，值填 classic PAT（勾选 public_repo）。"
+            exit 1
+          fi
+
       - name: Checkout resources
         uses: actions/checkout@v4
         with:
@@ -38,10 +53,9 @@ jobs:
         with:
           repository: ${{ github.repository }}.wiki
           path: wiki
-          # 推送 wiki 需要 PAT：GitHub 的 GITHUB_TOKEN 没有 wiki 仓库写权限。
-          # 在 Settings → Secrets and variables → Actions 添加 WIKI_TOKEN（fine-grained PAT，
-          # 勾选本仓库 Contents: Read and write），未配置时回退到 GITHUB_TOKEN。
-          token: ${{ secrets.WIKI_TOKEN || secrets.GITHUB_TOKEN }}
+          # classic PAT，classic 的 public_repo scope 覆盖 .wiki 仓库；
+          # 在 Settings → Secrets and variables → Actions 新建 secret：WIKI_TOKEN
+          token: ${{ secrets.WIKI_TOKEN }}
 
       - name: Setup Python
         uses: actions/setup-python@v5

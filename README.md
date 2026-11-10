@@ -146,9 +146,18 @@ rsync -av --delete --progress /opt/picture/ww_resources/custom_role_pile/ /opt/g
   （可填 `version` 指定数据版本，`override` 人工修正性别，如 `1512=女`）
 
 > [!IMPORTANT]
-> 推送 wiki 需要 **PAT**：在仓库 `Settings → Secrets and variables → Actions`
-> 新建 `WIKI_TOKEN`（fine-grained token，权限 `Contents: Read and write`）。
-> GitHub 默认的 `GITHUB_TOKEN` 没有 wiki 仓库写权限。
+> 推送 wiki 必须配一个 **classic PAT**，否则工作流会在第一步直接失败：
+>
+> 1. GitHub → 头像 → `Settings` → `Developer settings` → `Personal access tokens`
+>    → `Tokens (classic)` → `Generate new token (classic)`
+> 2. 勾选 `public_repo`（本仓库为 public；若改私有则需 `repo`），生成后复制
+> 3. 本仓库 → `Settings` → `Secrets and variables` → `Actions` → `Secrets` 标签
+>    → **New repository secret**，Name 填 **`WIKI_TOKEN`**，Secret 粘 token
+>
+> 为什么不能用别的：
+> - 默认 `GITHUB_TOKEN` 只对主仓库有效，`.wiki` 是**独立仓库**，推不上去；
+> - **fine-grained PAT 也不行**——它的仓库选择列表里根本没有 `<repo>.wiki` 这一项，
+>   选了主仓库也只给主仓库权限，推 wiki 照样 403。
 
 ## 📌 注意事项
 
