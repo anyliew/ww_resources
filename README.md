@@ -29,13 +29,13 @@
 
 | 文档 | 内容 |
 | --- | --- |
-| [快速开始](https://github.com/anyliew/ww_resources/wiki/使用教程/快速开始) | 三类素材的用途、取文件方式、目录对照、验证方法 |
-| [帮助横幅背景图](https://github.com/anyliew/ww_resources/wiki/使用教程/管理-帮助横幅背景图) | `banner_bg`：网页控制台上传 / RoverSign 文件替换 |
-| [角色面板图](https://github.com/anyliew/ww_resources/wiki/使用教程/管理-角色面板图) | `custom_role_pile`：目录结构、复制与 rsync 同步 |
-| [帮助图标](https://github.com/anyliew/ww_resources/wiki/使用教程/管理-帮助图标) | `icon`：尺寸建议与上传方式 |
-| [Debian 部署与定时更新](https://github.com/anyliew/ww_resources/wiki/使用教程/部署-Debian与定时更新) | git + rsync + 1Panel / cron 自动跟随更新 |
-| [鸣潮角色面板图资源统计](https://github.com/anyliew/ww_resources/wiki/统计/鸣潮角色面板图资源统计) | 各角色图片数量与体积盘点、待补齐清单 |
-| [角色名称与 ID 对照表](https://github.com/anyliew/ww_resources/wiki/参考/角色名称与ID对照表) | 角色 ID ↔ 中/英/韩/日文名称 |
+| [快速开始](https://github.com/anyliew/ww_resources/wiki/教程-快速开始) | 三类素材的用途、取文件方式、目录对照、验证方法 |
+| [帮助横幅背景图](https://github.com/anyliew/ww_resources/wiki/教程-帮助横幅背景图) | `banner_bg`：网页控制台上传 / RoverSign 文件替换 |
+| [角色面板图](https://github.com/anyliew/ww_resources/wiki/教程-角色面板图) | `custom_role_pile`：目录结构、复制与 rsync 同步 |
+| [帮助图标](https://github.com/anyliew/ww_resources/wiki/教程-帮助图标) | `icon`：尺寸建议与上传方式 |
+| [Debian 部署与定时更新](https://github.com/anyliew/ww_resources/wiki/教程-Debian部署与定时更新) | git + rsync + 1Panel / cron 自动跟随更新 |
+| [鸣潮角色面板图资源统计](https://github.com/anyliew/ww_resources/wiki/鸣潮角色面板图资源统计) | 各角色图片数量与体积盘点、待补齐清单 |
+| [角色名称与 ID 对照表](https://github.com/anyliew/ww_resources/wiki/角色名称与ID对照表) | 角色 ID ↔ 中/英/韩/日文名称 |
 
 
 
@@ -47,7 +47,7 @@
 
 本仓库 `custom_role_pile/` 下的目录名**即角色 ID**（例如 `1102` 对应「散华」），
 需要查 ID 与名称对应关系时请直接查上面的站点，或看仓库自动生成的
-[角色名称与 ID 对照表](https://github.com/anyliew/ww_resources/wiki/参考/角色名称与ID对照表)。
+[角色名称与 ID 对照表](https://github.com/anyliew/ww_resources/wiki/角色名称与ID对照表)。
 
 
 
