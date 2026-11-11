@@ -34,8 +34,9 @@
 | [角色面板图](https://github.com/anyliew/ww_resources/wiki/教程-角色面板图) | `custom_role_pile`：目录结构、复制与 rsync 同步 |
 | [帮助图标](https://github.com/anyliew/ww_resources/wiki/教程-帮助图标) | `icon`：尺寸建议与上传方式 |
 | [Debian 部署与定时更新](https://github.com/anyliew/ww_resources/wiki/教程-Debian部署与定时更新) | git + rsync + 1Panel / cron 自动跟随更新 |
-| [鸣潮角色面板图资源统计](https://github.com/anyliew/ww_resources/wiki/鸣潮角色面板图资源统计) | 各角色图片数量与体积盘点、待补齐清单 |
-| [角色名称与 ID 对照表](https://github.com/anyliew/ww_resources/wiki/角色名称与ID对照表) | 角色 ID ↔ 中/英/韩/日文名称 |
+| [鸣潮角色面板图资源统计](https://github.com/anyliew/ww_resources/wiki/鸣潮角色面板图资源统计) | 各角色图片数量与体积盘点（含性别标注）、待补齐清单 |
+| [漂泊者（各形态）](https://github.com/anyliew/ww_resources/wiki/统计-漂泊者) | 主角按元素 / 性别拆分的立绘核对，检查是否成对补齐 |
+| [角色名称与 ID 对照表](https://github.com/anyliew/ww_resources/wiki/角色名称与ID对照表) | 角色 ID ↔ 中/英/韩/日文名称、性别 |
 
 
 
